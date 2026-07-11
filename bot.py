@@ -287,7 +287,7 @@ def main() -> None:
     """Run the bot."""
     token = os.getenv("8820682654:AAFGoQxVoc65AbeeM02xP-l2a-pkvsPcbyw")
     if not token:
-        raise ValueError("TELEGRAM_BOT_TOKEN environment variable not set")
+        raise ValueError("8820682654:AAFGoQxVoc65AbeeM02xP-l2a-pkvsPcbyw")
 
     application = Application.builder().token(token).build()
     application.add_handler(CommandHandler("start", start))
