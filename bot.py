@@ -285,9 +285,10 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 def main() -> None:
     """Run the bot."""
-    token = os.getenv("8820682654:AAFGoQxVoc65AbeeM02xP-l2a-pkvsPcbyw")
-    if not token:
-        raise ValueError("8820682654:AAFGoQxVoc65AbeeM02xP-l2a-pkvsPcbyw")
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+
+if not token:
+    raise ValueError("TELEGRAM_BOT_TOKEN environment variable not set")
 
     application = Application.builder().token(token).build()
     application.add_handler(CommandHandler("start", start))
